@@ -8,6 +8,7 @@ Este repositório contém vários exemplos de códigos para ESP32 que podem ser 
 
 - **esp32-webserver-wokwi/**: Servidor web simples que permite controlar LEDs via interface web.
 - **webserver-api/**: Servidor web com API REST (GET, POST).
+- **esp32-http-client-weather/**: Cliente HTTP que consome API de clima e aciona LEDs com base na temperatura.
 
 ## Pré-requisitos
 
@@ -40,17 +41,17 @@ Para que o código seja executado no Wokwi, é necessário compilar o código no
 
 ### Executando um Projeto Específico no Wokwi
 
-1. Navegue até a pasta do projeto desejado (ex: `esp32-webserver-wokwi/` ou `webserver-api/`).
+1. Navegue até a pasta do projeto desejado (ex: `esp32-webserver-wokwi/`, `webserver-api/` ou `esp32-http-client-weather/`).
 2. Abra o arquivo `diagram.json` localizado na pasta do projeto.
 3. Clique no botão **"Start Simulation"** na extensão Wokwi que aparecerá no editor.
    - Isso iniciará a simulação diretamente no VS Code, carregando o diagrama e o binário compilado da pasta `build` (se gerado).
-4. O servidor web do ESP32 estará rodando na simulação, e você poderá interagir com ele através da interface do simulador.
+4. O projeto selecionado estará rodando na simulacao, e voce podera interagir via navegador (nos exemplos de servidor) ou acompanhar o Serial Monitor (nos exemplos de cliente HTTP).
 
-### Acessando a Interface Web
+### Acessando Interface Web ou Logs Serial
 
-- No simulador Wokwi, localize o endereço IP do ESP32 (geralmente exibido no console ou na interface do simulador).
-- Abra um navegador web e digite o endereço IP do ESP32 para acessar a página web ou API servida pelo dispositivo.
-- Para projetos com interface web, você verá controles para LEDs; para APIs, use ferramentas como Postman para testar os endpoints.
+- No simulador Wokwi, localize o endereco IP do ESP32 (geralmente exibido no console ou na interface do simulador).
+- Para projetos de servidor, abra um navegador web e digite o endereco IP do ESP32 para acessar a pagina web ou API.
+- Para projetos de cliente HTTP, acompanhe o Serial Monitor para ver requisicoes, respostas e regras aplicadas.
 
 ## Notas Adicionais
 
